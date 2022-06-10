@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>CBJ Accordion</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+<script src="https://s3.amazonaws.com/fed-nhl-microsites/prod/vendor/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      .accordion {
+  background-color: #CC0033;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+    <script src="/js/stringify.js?1b87a8e3a931715a2d86f1ebae1438038242ed40" charset="utf-8"></script>
+    <script>
+      const customConsole = (w) => {
+        const pushToConsole = (payload, type) => {
+          w.parent.postMessage({
+            console: {
+              payload: stringify(payload),
+              type:    type
+            }
+          }, "*")
+        }
+
+        w.onerror = (message, url, line, column) => {
+          // the line needs to correspond with the editor panel
+          // unfortunately this number needs to be altered every time this view is changed
+          line = line - 70
+          if (line < 0){
+            pushToConsole(message, "error")
+          } else {
+            pushToConsole(`[${line}:${column}] ${message}`, "error")
+          }
+        }
+
+        let console = (function(systemConsole){
+          return {
+            log: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "log")
+              systemConsole.log.apply(this, args)
+            },
+            info: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "info")
+              systemConsole.info.apply(this, args)
+            },
+            warn: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "warn")
+              systemConsole.warn.apply(this, args)
+            },
+            error: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "error")
+              systemConsole.error.apply(this, args)
+            },
+            system: function(arg){
+              pushToConsole(arg, "system")
+            },
+            clear: function(){
+              systemConsole.clear.apply(this, {})
+            },
+            time: function(){
+              let args = Array.from(arguments)
+              systemConsole.time.apply(this, args)
+            },
+            assert: function(assertion, label){
+              if (!assertion){
+                pushToConsole(label, "log")
+              }
+
+              let args = Array.from(arguments)
+              systemConsole.assert.apply(this, args)
+            }
+          }
+        }(window.console))
+
+        window.console = { ...window.console, ...console }
+
+        console.system("Running fiddle")
+      }
+
+      if (window.parent){
+        customConsole(window)
+      }
+    </script>
+</head>
+<body>
+    <button class="accordion">When does the season ticket renewal window for the 2022-23 season begin?</button>
+<div class="panel">
+                <p><p>Season Ticket Holders are able to renew 2022-23 season tickets now through Friday, March 31, 2022 by logging into their <u><a target="_blank" rel="noopener noreferrer" href="https://am.ticketmaster.com/bluejackets/#/" style="color:red">My Blue Jackets Account</a></u>, by contacting your <u><a target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+</p>
+</div>
+<button class="accordion">What is the deadline to renew and guarantee my seats and pricing for the 2022-23 season?</button>
+<div class="panel">
+                <p>The deadline to guarantee your seats and pricing is Friday, March 31, 2022. After this date, any non-renewed account may have their seats made available to other Season Ticket Holders through the Seat Relocation/Upgrade process.</p>
+
+<p>For questions, please contact your <u><a target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+
+</div>
+<button class="accordion">What are the payment options for my season tickets?</button>
+<div class="panel">
+                <p><b>RENEWAL OPTIONS:</b> The first payment will be charged at the time of renewal and all remaining payments will be charged on the 20th of each month through February 2023. After February 28, 2022, the following payment plans will be available: </p>
+
+<ul>
+	<li>Full Season*: 12-month payment plan</li>
+	<li>Half Season*: 10-month payment plan</li>
+	<li>Quarter Season*: 7-month payment plan</li>
+</ul>
+
+	<p>Summer Payment Plan</br>
+	<ul>
+	<li>This plan is available for all plan holders. Season Ticket Holders that opt into this plan will be charged 1/3 of the balance upon renewing and the remaining balance will be split evenly with payments scheduled May 20th and July 20th.</li>
+	</ul>
+	</p>
+
+<p><i>* First payment will be charged at time of renewal with remaining payments, based on payment plan type, charged on the 20th of each month.</i></p>
+
+</div>
+<button class="accordion">Are there advantages to renewing my season tickets early?</button>
+<div class="panel">
+                <p>The earlier you renew - the more chances you will have to win great prizes in our Season Ticket Holder Renewal Sweepstakes. To see a full listing of all Renewal Sweepstakes prizes, click <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/renewal-sweepstakes-winners" style="color:red">HERE</a></u>.</p>
+
+<p>Full Season Ticket Holders that PAY IN FULL by March 31, 2022 will earn CBJ Rewards, redeemable for food, beverages, and merchandise at Nationwide Arena. The percentage earned is based on tenure with the Blue Jackets. For more information, please visit the <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/cbj-rewards" style="color:red">CBJ Rewards</a></u> program page.</p>
+
+</div>
+<button class="accordion">I am a Multi-Year Season Ticket Holder, is there anything I need to do?</button>
+<div class="panel">
+	
+	<p>If you are interested in taking advantage of a convenient monthly Payment Plan option, please log into your <u><a  target="_blank" rel="noopener noreferrer" href="https://am.ticketmaster.com/bluejackets/#/" style="color:red">My Blue Jackets Account</a></u> and select the monthly payment plan in the Payment Options tab. Follow the steps to make your first payment or for assistance, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+
+	<p>If you are satisfied with your payment selection, your account will automatically renew and your first payment will be charged on March 18, 2022 using the same payment information and payment plan you had previously set up. As a Multi-Year Season Ticket Holder, you are automatically eligible for all Renewal Sweepstakes prizes!</p>
+	
+</div>
+<button class="accordion">What is the Season Ticket Holder Renewal Sweepstakes?</button>
+<div class="panel">
+                <p>The Season Ticket Holder Renewal Sweepstakes is an opportunity for renewed Season Ticket Holders to win one of 1,000+ prizes, just for renewing their tickets! From January 24th through March 31st, prizes will be announced through bluejackets.com and on game broadcasts. The earlier you renew - the more chances you will have to win great prizes. To see a full listing of all Renewal Sweepstakes prizes, click <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/renewal-sweepstakes-winners" style="color:red">HERE</a></u>.</p>
+
+<p>For questions, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+
+</div>
+<button class="accordion">If I want to relocate or upgrade my season ticket location, when can I do that?</button>
+<div class="panel">
+                <p>The Seat Relocation/Upgrade process typically takes place shortly after completion of the regular season. All renewed Season Ticket Holders will be notified prior to the event with their assigned date and time to view available inventory.</p>
+
+<p>For questions, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+
+</div>
+<button class="accordion">I am on the CBJ Savings Plan - How does that affect my payments for the 2022-23 season?</button>
+<div class="panel">
+                <p>If you enrolled in the CBJ Savings Plan, you have paid ahead towards your 2022-23 Blue Jackets Season Tickets. After the final payment of the CBJ Savings Plan is charged on February 20th, all Saving Plan payments will be applied to your 2022-23 renewal. If you still have a balance due remaining, your Account Specialist will be in touch to get your account set up on a new payment plan. Based on the amount paid towards next season, a 3% bonus will be added to your account by September 15, 2022 and can be used as CBJ Rewards during the 2022-23 season.</p>
+
+<p>For questions, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+
+</div>
+<button class="accordion">Where can I find my renewal invoice?</button>
+<div class="panel">
+                <p>You can find your detailed renewal invoice for the 2022-23 season by logging into your <u><a  target="_blank" rel="noopener noreferrer" href="https://am.ticketmaster.com/bluejackets/#/" style="color:red">My Blue Jackets Account</a></u> and selecting the "invoice" tab at the top left of the page.</p>
+
+<p>For questions, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+
+</div>
+<button class="accordion">How do I make my first payment online?</button>
+<div class="panel">
+                <p>You can make your first payment online towards your renewal invoice for the 2022-23 season through your <u><a  target="_blank" rel="noopener noreferrer" href="https://am.ticketmaster.com/bluejackets/#/" style="color:red">My Blue Jackets Account</a></u>.</p>
+
+<p>For questions, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+
+</div>
+<button class="accordion">What happens if I miss a payment, my credit card is declined or I need to update my payment information?</button>
+<div class="panel">
+                <p>If you miss a payment, or your card is declined, you will be sent an email notifying you of your missed/declined payment. Additionally, your Account Specialist will contact you in the days after the scheduled payment.  Please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> to update your payment information.</p>
+
+</div>
+<button class="accordion">Can I upgrade my season ticket plan or add seats to my account?</button>
+<div class="panel">
+               <p>Yes! Please submit your account information <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/upgrade" style="color:red">HERE</a></u>. Please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, by email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+
+</div>
+<button class="accordion">What if I want to change seat location?</button>
+<div class="panel">
+                <p>All Season Ticket Holders who renew their season ticket package by March 31, 2022 will be eligible for the Seat Relocation/Upgrade process. This process typically takes place shortly after completion of the regular season and you can view the best available seats.</p>
+
+<p>For questions, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u> or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+
+</div>
+<button class="accordion">Can I pay off my season tickets early if I am on a payment plan?</button>
+<div class="panel">
+               <p>Yes! Season Ticket Holders are able to pay off their accounts at any time. Payments can be made by logging into your <u><a  target="_blank" rel="noopener noreferrer" href="https://am.ticketmaster.com/bluejackets/#/" style="color:red">My Blue Jackets Account</a></u> and select view invoice, followed by making your payment. You may also contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u> to make a payment or contact the Blue Jackets Ticket Office at 614-246-3350 or <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>.</p>
+
+</div>
+<button class="accordion">What happens to my account if Covid impacts the 2022-23 season?</button>
+<div class="panel">
+                <p>If Covid impacts the 2022-23 season, Season Ticket Holders will be the first to be notified.</p>
+
+<p>As always, please continue to check <u><a  target="_blank" rel="noopener noreferrer" href=" https://www.nhl.com/bluejackets/" style="color:red">www.bluejackets.com</a></u> for the most up to date information. For any questions, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist</a></u>, the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, or via <a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat.</a></p>
+
+</div>
+<button class="accordion">What is the CBJ Rewards deadline?</button>
+<div class="panel">
+                <p>CBJ Rewards is an exclusive Season Ticket Holder renewal benefit for Full Season Ticket Holders. This benefit provides Full Season Ticket Holders that renew and PAY IN FULL by March 31, 2022, the opportunity to earn CBJ Rewards redeemable for food, beverages, and merchandise at Nationwide Arena.</p>
+
+	        <p>CBJ Rewards will be loaded on Season Ticket Holders digital CBJ Rewards card by September 15, 2022. For more information, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist,</a></u> the Blue Jackets Ticket Office at 614-246-3350 or <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>.</p>
+
+</div>
+<button class="accordion">What will happen if I wait to renew until after the renewal deadline?</button>
+<div class="panel">
+                <p>Season Ticket Holders that do not renew by March 31, 2022, may have their tickets released and available for other Season Ticket Holders to choose from during the Seat Relocation/Upgrade process.</p>
+
+</div>
+<button class="accordion">How will the 2022 Stanley Cup Playoffs work?</button>
+<div class="panel">
+                <p>You have the opportunity to either Pay In Full or choose the Pay As We Play option. If you choose the Pay In Full option, the entire balance of the playoffs will be charged in full. If you select the Pay As We Play option, you will be charged as home games are confirmed. Season Ticket Holders will be asked to enter their credit card information to reserve their seats.  </p>
+	
+	<p>For questions, please contact your <u><a  target="_blank" rel="noopener noreferrer" href="https://www.nhl.com/bluejackets/tickets/sth-staff" style="color:red">Account Specialist,</a></u> the Blue Jackets Ticket Office at 614-246-3350, via email at <u><a  target="_blank" rel="noopener noreferrer" href="mailto:ticketsales@bluejackets.com" style="color:red">ticketsales@bluejackets.com</a></u>, via <u><a  target="_blank" rel="noopener noreferrer" href="https://www.websitealive8.com/1742/operator/guest/gDefault_v2.asp?cframe=login&amp;chattype=normal&amp;groupid=1742&amp;websiteid=0&amp;departmentid=0&amp;sessionid_=&amp;iniframe=&amp;ppc_id=&amp;autostart=&amp;proactiveid=&amp;text2chat_info=&amp;loginname=&amp;loginnamelast=&amp;loginemail=&amp;loginphone=&amp;infocapture_ids=&amp;infocapture_values=&amp;dl=http%3A%2F%2Fbluejackets.nhl.com%2Fclub%2Fpage.htm%3Fid%3D79530&amp;loginquestion=" style="color:red">chat</a></u>  or visit us at Season Ticket Holder Central (near section 118) at any home game.</p>
+</div>
+
+
+<script type="text/javascript">//<![CDATA[
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "sv7u8rnz"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+    <script>
+      let allLines = []
+
+      window.addEventListener("message", (message) => {
+        if (message.data.console){
+          let insert = document.querySelector("#insert")
+          allLines.push(message.data.console.payload)
+          insert.innerHTML = allLines.join(";\r")
+
+          let result = eval.call(null, message.data.console.payload)
+          if (result !== undefined){
+            console.log(result)
+          }
+        }
+      })
+    </script>
+
+</body>
+</html>
